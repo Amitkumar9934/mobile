@@ -6,20 +6,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "mobile")
-public class Mobile {
+@Table(name = "mobileDevices")
+public class MobileDevice {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String name;
-    private String price;
+    private int deviceID;
 
-    @OneToMany(mappedBy = "mobile")
-    private List<MobileDevice> devices;
+    private String model;
+    private String manufacturer;
+    private String os;
+    @ManyToOne
+    @JoinColumn(name = "mobile_id")
+    private Mobile mobile;
 }

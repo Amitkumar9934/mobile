@@ -7,8 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MobileDto {
-    private long id;
-    private String name;
-    private String price;
+public class ErrorClass {
+    private String message;
+    private String uri;
 }

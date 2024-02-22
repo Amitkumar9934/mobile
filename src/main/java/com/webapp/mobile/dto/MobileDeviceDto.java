@@ -7,8 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class MobileDto {
-    private long id;
-    private String name;
-    private String price;
+public class MobileDeviceDto {
+    private String model;
+    private String manufacturer;
+    private String os;
 }
